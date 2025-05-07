@@ -256,7 +256,7 @@ if __name__ == "__main__":
 
     # Dynamically import the selected algorithm (if AI mode is selected)
     if "ai" in parser.parse_known_args()[0].mode:
-        parser.add_argument("--algorithm", choices=["Random", "Greedy", "Expectimax"], default="random", help="AI algorithm")
+        parser.add_argument("--algorithm", choices=["Random", "Greedy", "Expectimax", "SnakeExpectimax"], default="random", help="AI algorithm")
         args = parser.parse_args()
         ai_module = importlib.import_module(f"ai_algs.{args.algorithm}_ai")  # Import module dynamically
         ai_class = getattr(ai_module, f"{args.algorithm}Agent")  # Get the class from the module

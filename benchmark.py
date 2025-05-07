@@ -18,7 +18,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--agent", 
-        choices=["Random", "Greedy", "Expectimax", "ExpectimaxCache", "Corner", "GreedySnake"], 
+        choices=["Random", "Greedy", "Expectimax", "SnakeExpectimax"], 
         default="Expectimax",
         help="Which agent to use"
     )
